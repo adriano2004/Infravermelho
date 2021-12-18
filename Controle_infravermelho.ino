@@ -21,17 +21,17 @@ void loop()
   if (irrecv.decode(&results))              
   {
     Serial.println(results.value, HEX);     
-    if (results.value == 0xFFA25D){
+    if (results.value == 0xFFA25D){//liga led1 se tecla 1 for pressionada
       digitalWrite(led1, HIGH);
       digitalWrite(led2, LOW); 
       digitalWrite(led3, LOW); 
     }   
-    else if(results.value == 0xFF629D){
+    else if(results.value == 0xFF629D){//liga led2 se tecla 1 for pressionada
       digitalWrite(led1, LOW);
       digitalWrite(led2, HIGH); 
       digitalWrite(led3, LOW); 
     }  
-    else if(results.value == 0xFFE21D){
+    else if(results.value == 0xFFE21D){//liga led3 se tecla 1 for pressionada
       digitalWrite(led1, LOW);
       digitalWrite(led2, LOW); 
       digitalWrite(led3, HIGH);   
